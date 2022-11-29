@@ -1,0 +1,9 @@
+salary = int(input('Введите размер зарплаты: '))
+expenses = int(input('Введите расходы на проживание: ')) # расходы первый месяц
+mounth = 10
+# money = 0 # Расходы со второго месяца
+summ = expenses
+for i in range(2, mounth + 1):
+    expenses = expenses * 1.03
+    summ = summ + expenses
+print('Необходимо взять в долг: ', (summ - salary * mounth) // 1 + 1, 'рублей')
